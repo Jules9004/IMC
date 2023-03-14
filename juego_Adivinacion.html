@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA JUEGO DE ADIVINACIÓN</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");   
+    }  
+
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    var numeroPensado = Math.round(Math.random()*10);
+    var intentos = 3;
+    var contador = 1;
+
+    
+    while(contador <= intentos){
+
+        var numeroLanzado = parseInt(prompt("Por favor ingrese un número entre 0 y 10"))
+
+        if (numeroLanzado == numeroPensado){
+            alert("Usted ha acertado en el intento : " + contador + " el número pensado era " + numeroPensado);
+            break; 
+        }
+
+        else{
+            alert("Usted ha errado")
+        }
+
+        contador++
+    }
+
+    if (numeroLanzado == numeroPensado){
+            imprimir("Usted ha acertado en el intento : " + contador + " . El número pensado era " + numeroPensado);
+            
+        }
+
+        else{
+            imprimir("Usted ha errado. El número pensado era: "+ numeroPensado);
+        }
+
+    imprimir("FIN");
+
+   
+</script>

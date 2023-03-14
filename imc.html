@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA CALCULAR IMC</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");   
+    }  
+
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    function calcularImc(peso, altura, nombre){
+
+        imc = peso /(altura * altura);
+        return imc;
+
+    }
+
+    nombre = prompt("Ingrese su nombre")
+    pesoInformado = prompt(nombre + ", cuál es su peso ")
+    alturaInformado = prompt(nombre + ", cuál es su altura")
+
+    imcCalculado = calcularImc(pesoInformado, alturaInformado)
+
+    imprimir(nombre + ", su imc calculado es : " + imcCalculado);
+
+
+    if (imcCalculado < 18.5){
+        imprimir("Peso inferior al recomendado")
+    }
+
+     if (imcCalculado >= 18.5 && imcCalculado < 25){
+        imprimir("Peso normal")
+    }
+
+     if (imcCalculado >=25 && imcCalculado < 30){
+        imprimir("Sobrepeso")
+    }
+
+     if (imcCalculado >= 30){
+        imprimir("Se considera Obesidad")
+    }
+
+
+    //var imcJT = calcularImc(55, 1.64);
+    //var imcJLM = calcularImc(70, 1.82);
+
+    //imprimir ("El promedio del imc calculado de  Julieta y Jean Luc es: " + Math.round((imcJT + imcJLM)/2))
+
+    //imprimir ("El promedio del imc calculado de  Gabriela y Luisa es: " + Math.round((calcularImc(64, 1.68) + calcularImc(55, 1.58))/2))
+
+    //function calcularImc(peso1, altura1, nombre1, peso2, altura2, nombre2){
+
+    //    imc1 = peso1/(altura1*altura1);
+    //    imprimir("El imc calculado de " + nombre1 + " es: " + Math.round(imc1));
+
+    //    imc2 = peso2/(altura2*altura2);
+    //    imprimir("El imc calculado de " + nombre2 + " es: " + Math.round(imc2));
+    
+    //    imprimir ("El promedio del imc calculado de  " + nombre1 + " y " + nombre2 + " es: "  + Math.round((imc1 + imc2)/2))
+    //}
+
+    //calcularImc(55, 1.64, "Julieta", 70, 1.82, "Jean Luc");
+    //calcularImc(60, 1.70, "Gabriela", 55, 1.60, "Luisa");
+   
+</script>

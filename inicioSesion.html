@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA INICIO SESIÓN</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");   
+    }  
+
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var intentos = 3;
+    var contador = 1;
+
+    
+    while(contador <= intentos){
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            break;
+        } else {
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+        }
+        contador++
+        
+    }
+
+
+    imprimir("FIN");
+
+   
+</script>
